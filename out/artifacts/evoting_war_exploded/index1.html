@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+        <title>Secure Voting</title>
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+        <script type="text/javascript" src="materialize/js/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="materialize/js/materialize.js"></script>
+        <script type="text/javascript" src="materialize/js/index_script.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body onload="grid_gen()">
+        <nav class="cyan darken-4" role="navigation">
+            <div class="nav-wrapper container">
+                <a href="index.html" class="brand-logo" id="logo-container">Logo</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="view_results.jsp">VIEW RESULTS</a></li>
+                    <li><a href="signup.html">SIGNUP</a></li>
+                </ul>
+                
+                <ul id="mobile-demo" class="side-nav">
+                    <li><a href="view_results.jsp">VIEW RESULTS</a></li>
+                    <li><a href="signup.html">SIGNUP</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="row section">
+            <div class="row"></div>
+            <div class="row"></div>
+            <div class="row"></div>
+            <div class="row"></div>
+            <div class="row"></div>
+            <div class="col s7">
+            </div>
+            <form class="col s4" action="user_profile.jsp" method="post">
+                <div class="row">
+                    <h4 class="header" style="color: #006064">LOGIN</h4>
+                    <div class="input-field col s12">
+                        <input id="ID" required type="text" class="validate" name="uniqueId">
+                        <label for="ID">ID</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="password" required type="password" class="validate" name="password">
+                        <label for="password">Password</label>
+                    </div>
+                </div>
+                <label class="col s12">Enter from grid card</label>
+                <div class="row">
+                    <div class="input-field col s3">
+                        <input type="text" required class="validate" onkeyup="only_numbers('1')" id="1" maxlength="1">
+                        <label for="1" id="grid_label0"></label>
+                    </div>
+                    <div class="input-field col s3">
+                        <input type="text" required class="validate" onkeyup="only_numbers('2')" id="2" maxlength="1">
+                        <label for="2" id="grid_label1"></label>
+                    </div>
+                    <div class="input-field col s3">
+                        <input type="text" required class="validate" onkeyup="only_numbers('3')" id="3" maxlength="1">
+                        <label for="3" id="grid_label2"></label>
+                    </div>
+                    <div class="input-field col s3">
+                        <input type="text" required class="validate" onkeyup="only_numbers('4')" id="4" maxlength="1">
+                        <label for="4" id="grid_label3"></label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <button class="btn waves-effect waves-light" type="submit" name="action" onclick="compute_grid_string()">Submit
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+                </div>
+                <input type="hidden" id="grid" name="grid"/>
+            </form>
+            <div class="col s1">
+            </div>
+        </div>
+    </body>
+</html>

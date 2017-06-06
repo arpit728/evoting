@@ -1,0 +1,56 @@
+.table_header {
+    color: white;
+    background-color: #006064; 
+}
+
+label > input {
+    visibility: hidden;
+    position: absolute;
+}
+
+label > input + img {
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+label > input:checked + img {
+    position: relative;
+    cursor: pointer;
+    -webkit-shadow: rgba(0,0,0,.2) 4px 6px 6px;
+    -moz-shadow: rgba(0,0,0,.2) 4px 6px 6px;
+    box-shadow: rgba(0,0,0,.2) 4px 6px 6px;
+    border: 2px solid #2BBBAD;
+    transition: all 0.1s linear;
+}
+
+img {
+    max-height: 20em;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.candidate_division {
+    text-align: center;
+}
+
+.votes_cell {
+    font-size: 1.6em;
+}
+
+.winner_cell_indicator {
+    -webkit-shadow: rgba(0,0,0,.2) 4px 6px 6px;
+    -moz-shadow: rgba(0,0,0,.2) 4px 6px 6px;
+    box-shadow: rgba(0,0,0,.2) 4px 6px 6px;
+    border: 2px solid #2BBBAD;
+}
+
+.invi {
+    opacity: 0;
+}
+
+.visible {
+    opacity: 1;
+}
+
